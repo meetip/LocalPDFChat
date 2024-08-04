@@ -51,7 +51,8 @@ def get_vectorstore(chunks):
     return vectorstore
 
 #Provide your OPENAI API Key in terminal
-os.environ["OPENAI_API_KEY"] = getpass.getpass("OpenAI API Key:")
+#os.environ["OPENAI_API_KEY"] = getpass.getpass("OpenAI API Key:")
+OPENAI_API_KEY = st.secrets["openai"]["api_key"]
 
 # generating conversation chain  
 def get_conversationchain(vectorstore):
