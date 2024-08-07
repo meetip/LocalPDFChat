@@ -56,7 +56,7 @@ OPENAI_API_KEY = st.secrets["openai"]["api_key"]
 
 # generating conversation chain  
 def get_conversationchain(vectorstore):
-    llm = ChatOpenAI(temperature=0.2, openai_api_key="OPENAI_API_KEY")
+    llm = ChatOpenAI(temperature=0.2, openai_api_key = OPENAI_API_KEY)
     #llm=ChatOpenAI(temperature=0.2)
     memory = ConversationBufferMemory(memory_key='chat_history', 
                                       return_messages=True,
